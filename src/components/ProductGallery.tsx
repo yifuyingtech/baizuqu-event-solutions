@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { categories, products } from "@/data/products";
-import { Package } from "lucide-react";
 
 const ProductGallery = () => {
   const [active, setActive] = useState("tents");
@@ -51,8 +50,15 @@ const ProductGallery = () => {
                 className="group bg-card rounded-xl border border-border overflow-hidden hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300"
               >
                 {/* Image placeholder */}
-                <div className="aspect-[4/3] bg-muted flex items-center justify-center">
-                  <Package className="w-12 h-12 text-muted-foreground/40" />
+                <div className="aspect-[4/3] bg-muted overflow-hidden">
+                  <img
+                    src={product.image}
+                    alt={product.chineseName}
+                    loading="lazy"
+                    width={800}
+                    height={600}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
                 </div>
                 <div className="p-5">
                   <h3 className="font-bold text-foreground mb-0.5">{product.chineseName}</h3>
