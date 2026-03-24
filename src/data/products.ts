@@ -6,6 +6,7 @@ export interface Product {
   description: string;
   features: string[];
   rentalPrice: string;
+  image: string;
 }
 
 export const categories = [
