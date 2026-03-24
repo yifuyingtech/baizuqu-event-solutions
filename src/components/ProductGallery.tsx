@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { categories, products } from "@/data/products";
-import { Package } from "lucide-react";
 
 const ProductGallery = () => {
   const [active, setActive] = useState("tents");
