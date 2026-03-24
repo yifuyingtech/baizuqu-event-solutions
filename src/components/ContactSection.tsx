@@ -10,7 +10,7 @@ const ContactSection = () => (
 
       <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
         {[
-          { icon: Phone, label: "電話聯繫", value: "02-XXXX-XXXX", sub: "週一至週五 09:00-18:00" },
+          { icon: Phone, label: "電話聯繫", value: "0988-105-413", sub: "週一至週五 09:00-18:00" },
           { icon: Mail, label: "電子郵件", value: "info@baizuqu.com", sub: "24小時內回覆" },
           { icon: MapPin, label: "服務據點", value: "台北市信義區", sub: "服務範圍涵蓋全台" },
         ].map((item) => (
