@@ -1,10 +1,14 @@
 import { motion } from "framer-motion";
+import corporateImg from "@/assets/cases/corporate.jpg";
+import weddingImg from "@/assets/cases/wedding.jpg";
+import launchImg from "@/assets/cases/launch.jpg";
+import festivalImg from "@/assets/cases/festival.jpg";
 
 const cases = [
-  { title: "企業年度尾牙", tag: "Corporate Event", desc: "500人規模企業尾牙，含舞台、音響、燈光全套工程" },
-  { title: "戶外婚禮派對", tag: "Wedding", desc: "浪漫草地婚禮，歐式帳篷搭配精緻桌椅佈置" },
-  { title: "品牌發表會", tag: "Product Launch", desc: "科技品牌新品發表，LED電視牆與專業視聽系統" },
-  { title: "市集嘉年華", tag: "Festival", desc: "大型戶外市集活動，帳篷群組與電力系統整合" },
+  { title: "企業年度尾牙", tag: "Corporate Event", desc: "500人規模企業尾牙，含舞台、音響、燈光全套工程", image: corporateImg },
+  { title: "戶外婚禮派對", tag: "Wedding", desc: "浪漫草地婚禮，歐式帳篷搭配精緻桌椅佈置", image: weddingImg },
+  { title: "品牌發表會", tag: "Product Launch", desc: "科技品牌新品發表，LED電視牆與專業視聽系統", image: launchImg },
+  { title: "市集嘉年華", tag: "Festival", desc: "大型戶外市集活動，帳篷群組與電力系統整合", image: festivalImg },
 ];
 
 const CasesSection = () => (
@@ -25,6 +29,14 @@ const CasesSection = () => (
             transition={{ delay: i * 0.1 }}
             className="group relative rounded-2xl overflow-hidden bg-muted aspect-[3/4] flex items-end"
           >
+            <img
+              src={c.image}
+              alt={c.title}
+              loading="lazy"
+              width={800}
+              height={1067}
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
             <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/40 to-transparent" />
             <div className="relative z-10 p-6">
               <span className="inline-block px-3 py-1 rounded-full bg-gradient-orange text-primary-foreground text-xs font-bold mb-3">
